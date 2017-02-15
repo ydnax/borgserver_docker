@@ -20,6 +20,7 @@ CMD ["/usr/bin/supervisord"]
 
 LABEL   org.freenas.interactive="false" \
         org.freenas.upgradeable="false" \
+        org.freenas.version="0.0.1" \
         org.freenas.volumes="[ \
                 {\"name\":\"/data\", \"description\":\"backup storage directory\"}, \
                 {\"name\":\"/config\", \"description\":\"config directory(borg user home)\"} \
