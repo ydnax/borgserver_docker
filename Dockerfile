@@ -17,3 +17,10 @@ RUN adduser -D -u 1000 -h /config/ borg && \
 COPY supervisord.conf /etc/supervisord.conf
 EXPOSE 22
 CMD ["/usr/bin/supervisord"]
+
+LABEL   org.freenas.interactive="false" \
+        org.freenas.upgradeable="false" \
+        org.freenas.volumes="[ \
+                {\"name\":\"/data\", \"description\":\"backup storage directory\"}, \
+                {\"name\":\"/config\", \"description\":\"config directory(borg user home)\"} \
+        ]"
